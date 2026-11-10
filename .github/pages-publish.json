@@ -1,0 +1,16 @@
+{
+  "site_dir": ".",
+  "files": [
+    "README.md",
+    "changelog.html",
+    "css/style.css",
+    "docs.html",
+    "img/favicon.svg",
+    "img/logo-icon.svg",
+    "img/marquee.png",
+    "index.html",
+    "privacy.html"
+  ],
+  "tool": "github-pages-publish",
+  "published_at": "2026-11-10T16:01:28+00:00"
+}
