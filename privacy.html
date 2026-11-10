@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · X Post Radar</title>
+<meta name="description" content="What the X Post Radar Chrome extension stores on your device, what leaves it, and what it never collects.">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Privacy Policy · X Post Radar">
+<meta property="og:description" content="What the X Post Radar Chrome extension stores on your device, what leaves it, and what it never collects.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="X Post Radar home"><img src="img/logo-icon.svg" alt="" width="32" height="32">X Post Radar</a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-opt" href="index.html#how">How it works</a><a class="nav-opt" href="index.html#pricing">Pricing</a><a class="nav-opt" href="index.html#faq">FAQ</a><a class="nav-docs" href="docs.html">Docs</a>
+      <a class="btn btn-primary" href="mailto:__WAITLIST_EMAIL__?subject=X%20Post%20Radar%20waitlist&amp;body=Please%20add%20me%20to%20the%20X%20Post%20Radar%20waitlist.">Join the launch waitlist</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<!-- Draft for legal review: confirm every statement before publishing. -->
+<div class="doc-hero"><div class="narrow">
+  <h1>X Post Radar privacy policy</h1>
+  <p class="meta">Effective date: <time datetime="2026-11-10">2026-11-10</time></p>
+</div></div>
+<article class="prose"><div class="narrow">
+<p class="lead">This policy covers the X Post Radar Chrome extension. There is no X Post Radar server and no user account with us.</p>
+
+<h2 id="stored">What is stored on your device</h2>
+<p>The extension stores the following in <code>chrome.storage.local</code> in your browser profile:</p>
+<ul>
+  <li>Your settings: signal weights, thresholds, niche keywords, mute keywords, and display options.</li>
+  <li>Local learning data derived from how you interact with posts, and keywords read from your own X profile when you use Auto-setup (Pro).</li>
+  <li>The on/off settings and threshold of the AI-likelihood check and of hiding likely AI posts, whether or not the TypeSafe score is on, and a marker that a one-time settings update has run. If you enable the TypeSafe score: its on/off setting. Your TypeSafe API key, if you enter one, is kept in the extension's own IndexedDB storage, which websites, x.com pages and other extensions cannot read; it is not encrypted on disk.</li>
+  <li>Your license status (<code>xgc_entitlement</code>): plan, status, and when it was last checked.</li>
+  <li>If you use product promotion (Pro): your product profiles and the text read from their landing pages, the posts scored for each product with their scores, your reply drafts, your reply style, your LLM provider settings, and your LLM API key (kept with the TypeSafe key in the extension's own IndexedDB).</li>
+</ul>
+<p>The extension reads the posts shown on x.com pages you open, including author handles and follower counts that X has already loaded in the page, to compute scores. This happens inside your browser. Scores and post data are not sent anywhere except as described below.</p>
+
+<h2 id="leaves">What leaves your device</h2>
+<p><strong>TypeSafe score (optional, off by default).</strong> If you turn it on and enter your own TypeSafe API key, the extension's service worker sends the text of highlighted posts, their public like, retweet and reply counts and age, and your niche keywords to <code>https://api.typesafe.ai</code>, authenticated with your key, and receives a score back. The AI-likelihood check (its own toggle, off by default) runs in your browser and sends nothing on its own: it looks for common AI-writing patterns in each post. Only if the TypeSafe score is also on is the text of every visible post and reply sent, not only highlighted ones, once per page view, to receive how likely each one is AI-generated; this may increase your TypeSafe usage. Hiding likely AI posts happens in your browser and sends nothing. TypeSafe's handling of that data is governed by TypeSafe's own terms and privacy policy. Turn the toggle off or remove the key to stop it.</p>
+<p><strong>Product promotion (Pro, only when you use it).</strong> Every request uses your own keys and is billed to your own accounts:</p>
+<ul>
+  <li><strong>Scan</strong> reads your product's landing page (and its <code>/llms.txt</code>) from the popup, opening it briefly in a background tab when the page is built by JavaScript, after Chrome asks you to allow that site and its subdomains, then sends the page text and any description you typed to <code>https://api.typesafe.ai</code> and, if you configured one, to your LLM provider.</li>
+  <li><strong>Find leads</strong> in the Leads view of the Top posts panel on x.com (once you have allowed <code>api.typesafe.ai</code> in the popup) sends the text of new posts collected on that x.com page, with each of your products' profiles (one request per post and product), to <code>https://api.typesafe.ai</code>. Author handles, names, links and post IDs are not sent.</li>
+  <li><strong>Write draft</strong> sends one post's text, your product's details and a short note on that post's lead score (for example "the author is asking for a solution") to your LLM provider: <code>https://api.anthropic.com</code>, <code>https://api.openai.com</code>, or the OpenAI-compatible server address you entered.</li>
+  <li>These providers' own terms and privacy policies govern what they receive. The extension never posts anything on X for you.</li>
+</ul>
+<p><strong>Pro purchases (ExtensionPay and Stripe).</strong> Payments are handled by ExtensionPay (extensionpay.com), which runs checkout on Stripe.</p>
+<ul>
+  <li>When you buy or restore Pro, a page on extensionpay.com opens in a tab. ExtensionPay learns your email address and payment status; Stripe processes your card details. The extension never sees or stores card data.</li>
+  <li>Nothing is sent to ExtensionPay until you first press <strong>Upgrade to Pro</strong> or <strong>Restore purchase</strong>. At that point ExtensionPay creates a random identifier for your install, and the extension stores it in Chrome sync storage.</li>
+  <li>After that, the service worker regularly asks ExtensionPay whether this install has paid. The request contains only that identifier: no timeline content, keywords or browsing data.</li>
+  <li>ExtensionPay's and Stripe's privacy policies apply to the data they hold.</li>
+</ul>
+<p><strong>Key tests (only when you press Test).</strong> In the popup's Settings tab, <strong>Test</strong> sends one short fixed test message with the key you are testing to that key's own service: <code>https://api.typesafe.ai</code> for the TypeSafe key, or your LLM provider for the LLM key. No post, keyword or product data is included.</p>
+<p>Nothing else is sent. The extension does not use the X API.</p>
+
+<h2 id="never">What we never collect</h2>
+<ul>
+  <li>Your X password, cookies, or session tokens</li>
+  <li>Your browsing history outside x.com</li>
+  <li>Timeline content for analytics, advertising, or training</li>
+  <li>Card or bank details</li>
+  <li>Analytics, telemetry, or crash reports</li>
+</ul>
+<p>We do not sell or share data, and do not use it for advertising or creditworthiness decisions.</p>
+
+<h2 id="retention">Retention</h2>
+<p>Local data stays until you change it, clear the extension's storage, or uninstall the extension (uninstalling removes it). The license status is refreshed on each check; if ExtensionPay cannot be reached, the last verified status is kept for up to 7 days before Pro turns off. Data held by TypeSafe, your LLM provider, ExtensionPay, or Stripe is retained under their policies; to have ExtensionPay purchase records removed, contact us and we will forward the request.</p>
+
+<h2 id="changes">Changes</h2>
+<p>Changes to this policy are published on this page with a new effective date.</p>
+
+<h2 id="contact">Contact</h2>
+<p>Email <a href="mailto:__SUPPORT_EMAIL__?subject=X%20Post%20Radar%20privacy">__SUPPORT_EMAIL__</a>.</p>
+<p><a href="index.html">Back to X Post Radar</a></p>
+</div></article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html"><img src="img/logo-icon.svg" alt="" width="32" height="32">X Post Radar</a>
+      <p>Find the posts worth replying to. A Chrome extension that scores your X timeline in your browser.</p>
+    </div>
+    <nav aria-label="Site pages">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="docs.html">Docs</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="https://x.com/luongnv89" rel="noopener">@luongnv89 on X</a></li>
+        <li><a href="mailto:__WAITLIST_EMAIL__?subject=X%20Post%20Radar%20waitlist&amp;body=Please%20add%20me%20to%20the%20X%20Post%20Radar%20waitlist.">Join the launch waitlist</a></li>
+        <li>Support: <a href="mailto:__SUPPORT_EMAIL__?subject=X%20Post%20Radar%20support">__SUPPORT_EMAIL__</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

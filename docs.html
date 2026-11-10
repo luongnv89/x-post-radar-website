@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started · X Post Radar</title>
+<meta name="description" content="Install X Post Radar, set your keywords, and turn on the optional TypeSafe score, AI-likelihood check and Pro features.">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Getting started · X Post Radar">
+<meta property="og:description" content="Install X Post Radar, set your keywords, and turn on the optional TypeSafe score, AI-likelihood check and Pro features.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="X Post Radar home"><img src="img/logo-icon.svg" alt="" width="32" height="32">X Post Radar</a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-opt" href="index.html#how">How it works</a><a class="nav-opt" href="index.html#pricing">Pricing</a><a class="nav-opt" href="index.html#faq">FAQ</a><a class="nav-docs" href="docs.html" aria-current="page">Docs</a>
+      <a class="btn btn-primary" href="mailto:__WAITLIST_EMAIL__?subject=X%20Post%20Radar%20waitlist&amp;body=Please%20add%20me%20to%20the%20X%20Post%20Radar%20waitlist.">Join the launch waitlist</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="doc-hero"><div class="narrow">
+  <h1>Getting started</h1>
+  <p>From install to your first scored timeline, plus the optional TypeSafe score, the AI-likelihood check and Pro.</p>
+</div></div>
+<article class="prose"><div class="narrow">
+<nav class="toc" aria-label="On this page">
+  <p>On this page</p>
+  <ul>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#install">Install</a></li>
+    <li><a href="#first-setup">First setup</a></li>
+    <li><a href="#keywords">Keywords</a></li>
+    <li><a href="#typesafe">TypeSafe score</a></li>
+    <li><a href="#ai-check">AI-likelihood check</a></li>
+    <li><a href="#pro">Pro features</a></li>
+    <li><a href="#buy">Buying, restoring and canceling Pro</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#uninstall">Uninstall</a></li>
+  </ul>
+</nav>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+  <li>Chrome or another Chromium browser.</li>
+  <li>Optional: your own TypeSafe API key, for the TypeSafe score.</li>
+  <li>Optional, Pro product promotion: your own LLM API key (Anthropic, OpenAI or an OpenAI-compatible server) for prefill and reply drafts.</li>
+</ul>
+<p>No X API key and no account with us.</p>
+
+<h2 id="install">Install</h2>
+<div class="callout-box">
+  <p><strong>X Post Radar is not on the Chrome Web Store yet.</strong> Once it is listed, you will install it from the Chrome Web Store. To get an email when that happens, join the waitlist.</p>
+  <p style="margin-top:0.9rem"><a class="btn btn-primary" href="mailto:__WAITLIST_EMAIL__?subject=X%20Post%20Radar%20waitlist&amp;body=Please%20add%20me%20to%20the%20X%20Post%20Radar%20waitlist."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Join the launch waitlist</a></p>
+</div>
+<p>On install, the extension asks for Chrome's <code>storage</code> permission and access to pages under <code>https://x.com/*</code>. Other permissions are asked for only when you turn on a feature that needs them.</p>
+
+<h2 id="first-setup">First setup</h2>
+<ol>
+  <li>Open <code>https://x.com</code>.</li>
+  <li>Open the X Post Radar popup from the Chrome toolbar.</li>
+  <li>Add your niche keywords and any mute keywords.</li>
+  <li>Optional: change signal weights and thresholds. Every weight and threshold is editable.</li>
+  <li>Save your settings and scroll your timeline.</li>
+</ol>
+<p>Each visible post gets a 0–100 score and a colored badge: high, medium or low priority. The score is computed in your browser from these signals: reach velocity (highest default weight), author reach (next-highest), reply window, discussion intent, reply ratio, keyword match and author verification. A post with almost no engagement cannot reach High, and a reply thread already crowded for the post's reach is pushed down. A post whose author's follower count is unknown is scored without that signal rather than scored as small.</p>
+<p>The radar also learns locally from which badged posts you actually engage with.</p>
+
+<h2 id="keywords">Keywords</h2>
+<ul>
+  <li><strong>Niche keywords</strong> are the relevance filter. When you set them, posts matching none of them are capped at low priority.</li>
+  <li><strong>Mute keywords</strong> hide matching posts from the radar.</li>
+  <li><strong>Auto-setup keywords</strong> (Pro), under Save Settings in the popup, fills the list from your bio plus recent posts and replies on x.com. The analysis stays in the browser, and existing keywords are replaced only after you confirm.</li>
+  <li><strong>Learn from my interactions</strong> (Pro) combines the newest 50 locally captured posts you liked, replied to or bookmarked with your profile, shows additions and removals, and changes the list only when you keep the review. You can revert the last list from the popup. No keyword learning runs in the background.</li>
+</ul>
+
+<h2 id="typesafe">TypeSafe score (optional)</h2>
+<p>Off by default. It adds a second, AI-based score for how likely a reply is to be seen (for example <code>TS 72%</code>) next to the local score.</p>
+<ol>
+  <li>Turn on the TypeSafe score in the popup. Chrome asks for one extra permission, <code>https://api.typesafe.ai/*</code>. If you decline, the toggle switches back off.</li>
+  <li>Enter your TypeSafe API key in the popup's <strong>Settings</strong> tab. Press <strong>Test</strong> to check it.</li>
+</ol>
+<p>While it is on, each highlighted post is sent to <code>api.typesafe.ai</code> with your key. Exactly these fields are sent: the post's text (truncated at 4,000 characters), your niche keywords, the post's public like, retweet and reply counts, and the post's age in whole minutes (capped at one week). No handles, display names, avatars, links, post IDs or anything about you is sent. Requests are billed to your TypeSafe account; results are cached per post.</p>
+<p>Your keys stay in the extension's own IndexedDB storage in this browser, which websites, x.com pages and other extensions cannot read. They are not encrypted on disk.</p>
+
+<h2 id="ai-check">AI-likelihood check (optional)</h2>
+<p>Off by default, with its own toggle. It looks for common AI-writing patterns in each visible post or reply and shows how likely it is AI-generated, for example <code>AI 87%</code>. Click it to see the patterns behind the number.</p>
+<ul>
+  <li>It runs in your browser. No key is needed and nothing is sent.</li>
+  <li>One pattern alone never scores high; several together do. A very short post with no clear sign shows nothing.</li>
+  <li>Optionally hide posts at or above an AI-likelihood you choose. Each hidden post has a <strong>Show post</strong> button. While hiding is on, hidden posts also stay out of Top posts and Find leads.</li>
+  <li>With the TypeSafe score also on, Jev (TypeSafe) rates each post too and the two are combined. In that case the text of every visible post is sent to <code>api.typesafe.ai</code> with your key, once per page view, which may increase your TypeSafe usage.</li>
+</ul>
+
+<h2 id="pro">Pro features</h2>
+<ul>
+  <li><strong>Top posts panel.</strong> A floating panel ranks the current page's top 10 posts by Jev (TypeSafe), Algorithm (the local score) or Combined (the average of the two). Algorithm works with TypeSafe off. Pick the panel's theme (System, Light or Dark) in the popup's Settings tab.</li>
+  <li><strong>Follower counts</strong> on badges.</li>
+  <li><strong>Keyword Auto-setup</strong> and <strong>keyword learning</strong>, described under <a href="#keywords">Keywords</a>.</li>
+  <li><strong>Product promotion.</strong> In the popup's Products tab, press <strong>Scan</strong> on your product's landing page to build a product profile. In the Leads view of the Top posts panel on x.com, press <strong>Find leads</strong> to rank the posts collected on the page where one of your products helps. <strong>Write draft</strong> asks your own LLM for a reply in one of five writing styles; you edit it, copy it, and the post opens on X for you to paste and post yourself. Every request is started by you and uses your own keys.</li>
+</ul>
+
+<h2 id="buy">Buying, restoring and canceling Pro</h2>
+<ul>
+  <li><strong>Upgrade to Pro</strong> in the popup opens ExtensionPay's checkout, on Stripe. Plans: $4.99 per month, $29.99 per year, or $49.99 once for lifetime access. After paying, reopen the popup; it checks your purchase and turns Pro on.</li>
+  <li><strong>Restore purchase</strong> opens ExtensionPay's login page, which emails you a sign-in link. Use it on another browser.</li>
+  <li><strong>Manage plan</strong> opens ExtensionPay's management page, where you can cancel. Pro stays active until the end of the paid period.</li>
+  <li>Refunds within 14 days of a charge: email <a href="mailto:__SUPPORT_EMAIL__?subject=X%20Post%20Radar%20support">__SUPPORT_EMAIL__</a> with your purchase email address. See the <a href="terms.html">Terms of Use</a>.</li>
+</ul>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+  <li><strong>The badge shows <code>TS –</code>.</strong> The TypeSafe key is missing or rejected, you hit a rate limit, or the network failed. Check the key with <strong>Test</strong> in Settings. The local score and highlight keep working, and the AI-likelihood falls back to the local pattern score.</li>
+  <li><strong>A post is missing from the Jev or Combined view.</strong> Those views rank a post only once its TypeSafe score is ready. The Algorithm view still ranks by the local score.</li>
+  <li><strong>The popup says "offline".</strong> ExtensionPay could not be reached. Pro keeps working for up to 7 days after the last successful check.</li>
+  <li><strong>Badges look wrong after an X update.</strong> X can change its pages at any time, which can affect scoring until the extension is updated.</li>
+</ul>
+
+<h2 id="uninstall">Uninstall</h2>
+<p>Remove X Post Radar from <code>chrome://extensions</code>. Uninstalling removes the data the extension stored in your browser. Data held by TypeSafe, your LLM provider, ExtensionPay or Stripe is kept under their own policies; see the <a href="privacy.html#retention">privacy policy</a>.</p>
+<p><a href="index.html">Back to X Post Radar</a></p>
+</div></article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html"><img src="img/logo-icon.svg" alt="" width="32" height="32">X Post Radar</a>
+      <p>Find the posts worth replying to. A Chrome extension that scores your X timeline in your browser.</p>
+    </div>
+    <nav aria-label="Site pages">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="docs.html" aria-current="page">Docs</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="https://x.com/luongnv89" rel="noopener">@luongnv89 on X</a></li>
+        <li><a href="mailto:__WAITLIST_EMAIL__?subject=X%20Post%20Radar%20waitlist&amp;body=Please%20add%20me%20to%20the%20X%20Post%20Radar%20waitlist.">Join the launch waitlist</a></li>
+        <li>Support: <a href="mailto:__SUPPORT_EMAIL__?subject=X%20Post%20Radar%20support">__SUPPORT_EMAIL__</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
