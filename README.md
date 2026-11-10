@@ -22,6 +22,7 @@ Shared styles live in `css/style.css`; images in `img/`.
 - No third-party requests: no analytics, cookies, web fonts, CDNs or external scripts. No JavaScript.
 - Relative links only, so the site works under the `/x-post-radar-website/` path.
 - `.nojekyll` makes GitHub Pages serve the files as they are.
+- Each page's body sits inside `<!--email_off-->` … `<!--/email_off-->`, so Cloudflare (in front of luongnv.com) neither rewrites the mailto links nor injects its email-decode script.
 
 ## Preview locally
 
