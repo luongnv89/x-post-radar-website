@@ -12,7 +12,6 @@ Published as a GitHub Pages project site: https://luongnv89.github.io/x-post-rad
 |------|------|
 | `index.html` | Landing page |
 | `privacy.html` | Privacy policy |
-| `terms.html` | Terms of use |
 | `changelog.html` | Release notes |
 | `docs.html` | Getting started |
 
@@ -23,17 +22,6 @@ Shared styles live in `css/style.css`; images in `img/`.
 - No third-party requests: no analytics, cookies, web fonts, CDNs or external scripts. No JavaScript.
 - Relative links only, so the site works under the `/x-post-radar-website/` path.
 - `.nojekyll` makes GitHub Pages serve the files as they are.
-
-## Before publishing
-
-Replace the two email tokens in every page:
-
-```bash
-grep -rl '__WAITLIST_EMAIL__\|__SUPPORT_EMAIL__' --include='*.html' . \
-  | xargs sed -i '' -e 's/__WAITLIST_EMAIL__/waitlist@example.com/g' -e 's/__SUPPORT_EMAIL__/support@example.com/g'
-```
-
-(On Linux, use `sed -i` without `''`.)
 
 ## Preview locally
 
