@@ -29,7 +29,7 @@
 <!-- Draft for legal review: confirm every statement before publishing. -->
 <div class="doc-hero"><div class="narrow">
   <h1>X Post Radar privacy policy</h1>
-  <p class="meta">Effective date: <time datetime="2026-11-10">2026-11-10</time></p>
+  <p class="meta">Effective date: <time datetime="2026-11-11">2026-11-11</time></p>
 </div></div>
 <article class="prose"><div class="narrow">
 <p class="lead">This policy covers the X Post Radar Chrome extension. There is no X Post Radar server and no user account with us.</p>
@@ -40,6 +40,7 @@
   <li>Your settings: signal weights, thresholds, niche keywords, mute keywords, and display options.</li>
   <li>Local learning data derived from how you interact with posts, and keywords read from your own X profile when you use Auto-setup (Pro).</li>
   <li>The on/off settings and threshold of the AI-likelihood check and of hiding likely AI posts, whether or not the TypeSafe score is on, and a marker that a one-time settings update has run. If you enable the TypeSafe score: its on/off setting. Your TypeSafe API key, if you enter one, is kept in the extension's own IndexedDB storage, which websites, x.com pages and other extensions cannot read; it is not encrypted on disk.</li>
+  <li>Your AI filter labels (<code>xgc_aiLabels</code>), if you press <strong>AI</strong> or <strong>Not AI</strong> under a post or reply, or in the placeholder of a post hidden as likely AI. These buttons show only while the AI-likelihood check is on; labels you already gave stay stored when you turn it off. Each label keeps only a random identifier, the label (AI or Not AI), a short code identifying the version of the AI-writing pattern list, the post's word count, and which AI-writing patterns matched it, each with how often it matched (once, or twice or more). A label never keeps the post's text, its author, any link, the post's ID, the time you labelled it, or a score. To make a label, the post's text is read when you press the button, only to count its words and patterns, and is not kept. So that pressing a label again can undo it, the extension remembers which post on the page carries which label in memory only; this is never written to storage and is gone when the page reloads. At most the newest 1,000 labels are kept. Labels are not sent anywhere.</li>
   <li>Your license status (<code>xgc_entitlement</code>): plan, status, and when it was last checked.</li>
   <li>If you use product promotion (Pro): your product profiles and the text read from their landing pages, the posts scored for each product with their scores, your reply drafts, your reply style, your LLM provider settings, and your LLM API key (kept with the TypeSafe key in the extension's own IndexedDB).</li>
 </ul>
@@ -75,7 +76,7 @@
 <p>We do not sell or share data, and do not use it for advertising or creditworthiness decisions.</p>
 
 <h2 id="retention">Retention</h2>
-<p>Local data stays until you change it, clear the extension's storage, or uninstall the extension (uninstalling removes it). The license status is refreshed on each check; if ExtensionPay cannot be reached, the last verified status is kept for up to 7 days before Pro turns off. Data held by TypeSafe, your LLM provider, ExtensionPay, or Stripe is retained under their policies; to have ExtensionPay purchase records removed, contact us and we will forward the request.</p>
+<p>Local data stays until you change it, clear the extension's storage, or uninstall the extension (uninstalling removes it). You can delete one AI filter label, or all of them, from the popup's <strong>AI filter labels</strong> list; once there are 1,000 labels, the oldest is removed for each new one. The license status is refreshed on each check; if ExtensionPay cannot be reached, the last verified status is kept for up to 7 days before Pro turns off. Data held by TypeSafe, your LLM provider, ExtensionPay, or Stripe is retained under their policies; to have ExtensionPay purchase records removed, contact us and we will forward the request.</p>
 
 <h2 id="changes">Changes</h2>
 <p>Changes to this policy are published on this page with a new effective date.</p>
