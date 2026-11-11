@@ -10,6 +10,14 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="X Post Radar: spend your attention on the X posts worth replying to">
 <meta property="og:description" content="A Chrome extension that filters the noise on your X timeline and scores each post 0 to 100 for reply opportunity, in your browser, so you spend your attention on the replies that grow your presence. Join the launch waitlist.">
+<meta property="og:url" content="https://x-radar.luongnv.com/">
+<meta property="og:image" content="https://x-radar.luongnv.com/img/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="X Post Radar: find the posts worth replying to">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@luongnv89">
+<link rel="canonical" href="https://x-radar.luongnv.com/">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,7 +39,7 @@
     <div>
       <p class="status"><span class="blip" aria-hidden="true"></span>Chrome extension. Not on the Chrome Web Store yet.</p>
       <h1 id="hero-title">Attention is all you have. Spend it where it counts.</h1>
-      <p class="lede">X Post Radar scores each post on your X timeline from 0 to 100 for how likely your reply is to be seen, highlights the ones worth your time, and can hide likely AI-written noise. Reply where it counts and grow your presence on X. The scoring runs in your browser, so your timeline stays on your device.</p>
+      <p class="lede">X Post Radar scores each post on your X timeline from 0 to 100 for how likely your reply is to be seen, so you spend your replies where they can grow your presence on X. It can also hide posts that read as AI-written. Scoring runs in your browser; by default, nothing from your timeline leaves your device.</p>
       <div class="btn-row"><a class="btn btn-primary" href="mailto:contact@luongnv.com?subject=X%20Post%20Radar%20waitlist&amp;body=Please%20add%20me%20to%20the%20X%20Post%20Radar%20waitlist."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Join the launch waitlist</a><a class="btn btn-ghost" href="https://x.com/luongnv89" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg>Follow @luongnv89 for launch news</a></div>
       <p class="hint">The waitlist button opens your email app with a ready-to-send message.</p>
       <ul class="trust" aria-label="Key facts">
@@ -56,10 +64,10 @@
 <section class="section" id="why" aria-labelledby="why-title">
   <div class="wrap">
     <div class="section-head">
-      <h2 id="why-title">Two reasons to use it</h2>
+      <h2 id="why-title">Read less noise. Reply where people are reading.</h2>
     </div>
     <div class="features pair">
-      <article class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Attention is all you have</h3><p>Every post on your timeline asks for your attention, and more of the feed is noise, including replies that read as AI-written. X Post Radar marks the posts worth reading and replying to, and can hide likely AI posts, so your time goes to people and conversations that matter to you.</p></article>
+      <article class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Spend less attention on noise</h3><p>Every post on your timeline asks for your attention, and more of it is noise, including replies that read as AI-written. X Post Radar marks the posts worth replying to and can hide likely AI posts, so your time goes to the people and conversations you care about.</p></article>
       <article class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><h3>Grow on X, one good reply at a time</h3><p>A reply on the right post is read by that post's audience, not only by your followers. The radar points you to fresh, fast-moving posts in your niche, where a thoughtful reply has the best chance of being seen and of making people curious about your profile.</p></article>
     </div>
   </div>
@@ -136,7 +144,7 @@
           <li><strong>Author reach</strong><span>The size of the author's audience, read from the timeline X has already loaded. Next-highest weight.</span></li>
           <li><strong>Reply window</strong><span>How fresh the post is.</span></li>
           <li><strong>Discussion intent</strong><span>Whether the post invites discussion.</span></li>
-          <li><strong>Reply ratio</strong></li>
+          <li><strong>Reply ratio</strong><span>Counts when a post has 20+ likes and fewer than one reply per 10 likes, so the thread is still short.</span></li>
           <li><strong>Keyword match</strong><span>Your niche keywords, used as a relevance filter.</span></li>
           <li><strong>Author verification</strong><span>Whether the author is verified.</span></li>
         </ul>
@@ -152,7 +160,7 @@
             <caption class="note table-note">No author handles, names, links or post IDs are sent. Nothing is ever posted for you. <a href="privacy.html">Read the full privacy policy</a>.</caption>
             <thead><tr><th scope="col">Feature</th><th scope="col">When</th><th scope="col">What is sent, and where</th></tr></thead>
             <tbody>
-              <tr><td>Local scoring</td><td>Always on</td><td><span class="nothing">Nothing.</span></td></tr><tr><td>TypeSafe score</td><td>Off by default. You turn it on and add your own key.</td><td>The text of highlighted posts, their public like, retweet and reply counts and age, and your niche keywords, to api.typesafe.ai.</td></tr><tr><td>AI-likelihood check</td><td>Off by default.</td><td><span class="nothing">Nothing on its own.</span> With the TypeSafe score also on: the text of every visible post, to api.typesafe.ai with your key.</td></tr><tr><td>Pro license check</td><td>Only after you press Upgrade to Pro or Restore purchase.</td><td>A random install identifier, to extensionpay.com. No timeline content.</td></tr><tr><td>Pro product promotion</td><td>Only when you press Scan, Find leads or Write draft.</td><td>Your product's page text, collected post text or one post, to api.typesafe.ai and your own LLM provider, with your own keys.</td></tr><tr><td>Key test</td><td>Only when you press Test in Settings.</td><td>One short fixed test message, to that key's own service.</td></tr>
+              <tr><td>Local scoring</td><td>Always on</td><td><span class="nothing">Nothing.</span></td></tr><tr><td>TypeSafe score</td><td>Off by default. You turn it on and add your own key.</td><td>The text of highlighted posts, their public like, retweet and reply counts and age, and your niche keywords, to api.typesafe.ai.</td></tr><tr><td>AI-likelihood check</td><td>Off by default.</td><td><span class="nothing">Nothing on its own.</span> With the TypeSafe score also on: the text of every visible post, to api.typesafe.ai with your key, which may increase your TypeSafe usage.</td></tr><tr><td>Pro license check</td><td>Only after you press Upgrade to Pro or Restore purchase.</td><td>A random install identifier, to extensionpay.com. No timeline content.</td></tr><tr><td>Pro product promotion</td><td>Only when you press Scan, Find leads or Write draft.</td><td>Your product's page text, collected post text or one post, to api.typesafe.ai and your own LLM provider, with your own keys.</td></tr><tr><td>Key test</td><td>Only when you press Test in Settings.</td><td>One short fixed test message, to that key's own service.</td></tr>
             </tbody>
           </table>
         </div>
@@ -171,7 +179,7 @@
       <div class="plan">
         <h3>Free</h3>
         <p class="price">$0</p>
-        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Local 0–100 score and badges on every visible post</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Mute keywords</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Scoring controls (weights, thresholds, niche keywords)</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Optional TypeSafe score: bring your own TypeSafe API key to add a second, AI-based score next to the local one. Off by default. When you turn it on, the text of highlighted posts and your niche keywords are sent to api.typesafe.ai using your key.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Optional AI-likelihood check: shows how likely each post or reply is AI-generated (AI 0-100%) from common AI-writing patterns, with the patterns behind it, and can hide posts above a threshold you choose, each with a Show post button. Off by default and runs in your browser: no key, nothing sent. With the TypeSafe score also on, Jev's rating is combined in and the text of every visible post is sent to api.typesafe.ai with your key, which may increase your TypeSafe usage.</span></li></ul>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Local 0–100 score and badges on every visible post</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Mute keywords</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Scoring controls (weights, thresholds, niche keywords)</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Optional TypeSafe score: a second, AI-based score next to the local one, with your own TypeSafe API key. Off by default. <a href="#score">See what it sends</a>.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Optional AI-likelihood check: how likely each post or reply is AI-generated (AI 0–100%), with the patterns behind it, and hiding above a threshold you choose. Off by default; runs in your browser with no key. <a href="#score">See what changes with TypeSafe on</a>.</span></li></ul>
       </div>
       <div class="plan pro">
         <h3>Pro</h3>
@@ -181,13 +189,14 @@
           <div class="rate"><b>$49.99</b><span>once, lifetime</span></div>
         </div>
         <p class="callout">Yearly costs about half of twelve monthly payments.</p>
-        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Floating Top posts panel ranking the best posts on the current page</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Author follower counts on badges</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Keyword Auto-setup from your X profile</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Keyword learning from your interactions and profile</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Product promotion: scan your product's web page, find posts on x.com where it genuinely helps, and get reply drafts you edit and post yourself (uses your own TypeSafe key and, for drafts, your own AI key)</span></li></ul>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Floating Top posts panel ranking the best posts on the current page</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Author follower counts on badges</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Keyword Auto-setup from your X profile</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Keyword learning from your interactions and profile</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Product promotion: find posts on x.com where your product genuinely helps, and get reply drafts you edit and post yourself (your own TypeSafe key, plus your own AI key for drafts)</span></li></ul>
       </div>
     </div>
     <div class="pricing-notes">
       <p><strong>Bought inside the extension.</strong> Payment runs through ExtensionPay on Stripe checkout; the extension never sees card details. You can restore a purchase on another browser from the popup.</p>
       <p><strong>14-day refunds.</strong> Refunds on request within 14 days of any charge, for every plan including Lifetime.</p>
     </div>
+    <div class="btn-row"><a class="btn btn-primary" href="mailto:contact@luongnv.com?subject=X%20Post%20Radar%20waitlist&amp;body=Please%20add%20me%20to%20the%20X%20Post%20Radar%20waitlist."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Join the launch waitlist</a></div>
   </div>
 </section>
 
